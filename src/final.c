@@ -261,7 +261,7 @@ void drawPlaceScreen(char board[10][10], char type){
 	}
 
 	char *bufferPtr;
-	bufferPtr = readRAWImage( "BattleshipLogo2.dat", 0);
+	bufferPtr = readRAWImage( "dat/BattleshipLogo2.dat", 0);
 	printRAWImage(225,(HEIGHT*0.75),300,69,bufferPtr);
 }
 
@@ -359,7 +359,7 @@ void play(char board1[10][10], char board2[10][10]){
 		gfx_color(255,255,255);
 		gfx_text( WIDTH/4, HEIGHT/2,output);
 		char *bufferPtr;
-		bufferPtr = readRAWImage( "BattleshipLogo.dat", 0);
+		bufferPtr = readRAWImage( "dat/BattleshipLogo.dat", 0);
 		printRAWImage(25,100,700,211,bufferPtr);
 		gfx_wait();
 	}
@@ -517,7 +517,7 @@ void openWindow(int width, int height){
 	gfx_clear();
 
 	char *bufferPtr;
-	bufferPtr = readRAWImage( "BattleshipLogo.dat", 0);
+	bufferPtr = readRAWImage( "dat/BattleshipLogo.dat", 0);
 	printRAWImage(25,100,700,211,bufferPtr);
 
 	gfx_color(255,255,255);
@@ -548,12 +548,12 @@ void drawYourBoard(char board[10][10], int dy){
 				case AC:
 					if(acp==0){
 						if(board[i][j+1]==AC || board[i][j+1]==ACHIT){		// Set image across
-							bufferPtr = readRAWImage( "AircraftCarrierA.dat", 0);
+							bufferPtr = readRAWImage( "dat/AircraftCarrierA.dat", 0);
 							printRAWImage(x,y,155,30,bufferPtr);
 						}
 
 						else if(board[i+1][j]==AC || board[i+1][j]==ACHIT){		// Set image down
-							bufferPtr = readRAWImage( "AircraftCarrierD.dat", 0);
+							bufferPtr = readRAWImage( "dat/AircraftCarrierD.dat", 0);
 							printRAWImage(x,y,31,154,bufferPtr);
 						}
 						acp=1;
@@ -562,12 +562,12 @@ void drawYourBoard(char board[10][10], int dy){
 				case BS:
 					if(bsp==0){
 						if(board[i][j+1]==BS || board[i][j+1]==BSHIT){		// Set image across
-							bufferPtr = readRAWImage( "BattleshipA.dat", 0);
+							bufferPtr = readRAWImage( "dat/BattleshipA.dat", 0);
 							printRAWImage(x,y,124,30,bufferPtr);
 						}
 
 						else if(board[i+1][j]==BS || board[i+1][j]==BSHIT){		// Set image down
-							bufferPtr = readRAWImage( "BattleshipD.dat", 0);
+							bufferPtr = readRAWImage( "dat/BattleshipD.dat", 0);
 							printRAWImage(x,y,31,123,bufferPtr);
 						}
 						bsp=1;
@@ -576,12 +576,12 @@ void drawYourBoard(char board[10][10], int dy){
 				case SUB:
 					if(sbp==0){
 						if(board[i][j+1]==SUB || board[i][j+1]==SUBHIT){		// Set image across
-							bufferPtr = readRAWImage( "SubmarineA.dat", 0);
+							bufferPtr = readRAWImage( "dat/SubmarineA.dat", 0);
 							printRAWImage(x,y,93,30,bufferPtr);
 						}
 
 						else if(board[i+1][j]==SUB || board[i+1][j]==SUBHIT){	// Set image down
-							bufferPtr = readRAWImage( "SubmarineD.dat", 0);
+							bufferPtr = readRAWImage( "dat/SubmarineD.dat", 0);
 							printRAWImage(x,y,31,92,bufferPtr);
 						}
 						sbp=1;
@@ -590,12 +590,12 @@ void drawYourBoard(char board[10][10], int dy){
 				case DESTROY:
 					if(dsp==0){
 						if(board[i][j+1]==DESTROY || board[i][j+1]==DESTROYHIT){		// Set image across
-							bufferPtr = readRAWImage( "DestroyerA.dat", 0);
+							bufferPtr = readRAWImage( "dat/DestroyerA.dat", 0);
 							printRAWImage(x,y,93,30,bufferPtr);
 						}
 
 						else if(board[i+1][j]==DESTROY || board[i+1][j]==DESTROYHIT){	// Set image down
-							bufferPtr = readRAWImage( "DestroyerD.dat", 0);
+							bufferPtr = readRAWImage( "dat/DestroyerD.dat", 0);
 							printRAWImage(x,y,31,92,bufferPtr);
 						}
 						dsp=1;
@@ -604,12 +604,12 @@ void drawYourBoard(char board[10][10], int dy){
 				case PATROL:
 					if(pbp==0){
 						if(board[i][j+1]==PATROL || board[i][j+1]==PATROLHIT){		// Set image across
-							bufferPtr = readRAWImage( "PatrolBoatA.dat", 0);
+							bufferPtr = readRAWImage( "dat/PatrolBoatA.dat", 0);
 							printRAWImage(x,y,62,30,bufferPtr);
 						}
 
 						else if(board[i+1][j]==PATROL || board[i+1][j]==PATROLHIT){		// Set image down
-							bufferPtr = readRAWImage( "PatrolBoatD.dat", 0);
+							bufferPtr = readRAWImage( "dat/PatrolBoatD.dat", 0);
 							printRAWImage(x,y,31,61,bufferPtr);
 						}
 						pbp=1;
@@ -618,12 +618,12 @@ void drawYourBoard(char board[10][10], int dy){
 				case ACHIT:
 					if(acp==0){
 						if(board[i][j+1]==AC || board[i][j+1]==ACHIT){		// Set image across
-							bufferPtr = readRAWImage( "AircraftCarrierA.dat", 0);
+							bufferPtr = readRAWImage( "dat/AircraftCarrierA.dat", 0);
 							printRAWImage(x,y,155,30,bufferPtr);
 						}
 
 						else if(board[i+1][j]==AC || board[i+1][j]==ACHIT){		// Set image down
-							bufferPtr = readRAWImage( "AircraftCarrierD.dat", 0);
+							bufferPtr = readRAWImage( "dat/AircraftCarrierD.dat", 0);
 							printRAWImage(x,y,31,154,bufferPtr);
 						}
 						acp=1;
@@ -634,12 +634,12 @@ void drawYourBoard(char board[10][10], int dy){
 				case BSHIT:
 					if(bsp==0){
 						if(board[i][j+1]==BS || board[i][j+1]==BSHIT){		// Set image across
-							bufferPtr = readRAWImage( "BattleshipA.dat", 0);
+							bufferPtr = readRAWImage( "dat/BattleshipA.dat", 0);
 							printRAWImage(x,y,124,30,bufferPtr);
 						}
 
 						else if(board[i+1][j]==BS || board[i+1][j]==BSHIT){		// Set image down
-							bufferPtr = readRAWImage( "BattleshipD.dat", 0);
+							bufferPtr = readRAWImage( "dat/BattleshipD.dat", 0);
 							printRAWImage(x,y,31,123,bufferPtr);
 						}
 						bsp=1;
@@ -650,12 +650,12 @@ void drawYourBoard(char board[10][10], int dy){
 				case SUBHIT:
 					if(sbp==0){
 						if(board[i][j+1]==SUB || board[i][j+1]==SUBHIT){		// Set image across
-							bufferPtr = readRAWImage( "SubmarineA.dat", 0);
+							bufferPtr = readRAWImage( "dat/SubmarineA.dat", 0);
 							printRAWImage(x,y,93,30,bufferPtr);
 						}
 
 						else if(board[i+1][j]==SUB || board[i+1][j]==SUBHIT){	// Set image down
-							bufferPtr = readRAWImage( "SubmarineD.dat", 0);
+							bufferPtr = readRAWImage( "dat/SubmarineD.dat", 0);
 							printRAWImage(x,y,31,92,bufferPtr);
 						}
 						sbp=1;
@@ -666,12 +666,12 @@ void drawYourBoard(char board[10][10], int dy){
 				case DESTROYHIT:
 					if(dsp==0){
 						if(board[i][j+1]==DESTROY || board[i][j+1]==DESTROYHIT){		// Set image across
-							bufferPtr = readRAWImage( "DestroyerA.dat", 0);
+							bufferPtr = readRAWImage( "dat/DestroyerA.dat", 0);
 							printRAWImage(x,y,93,30,bufferPtr);
 						}
 
 						else if(board[i+1][j]==DESTROY || board[i+1][j]==DESTROYHIT){	// Set image down
-							bufferPtr = readRAWImage( "DestroyerD.dat", 0);
+							bufferPtr = readRAWImage( "dat/DestroyerD.dat", 0);
 							printRAWImage(x,y,31,92,bufferPtr);
 						}
 						dsp=1;
@@ -682,12 +682,12 @@ void drawYourBoard(char board[10][10], int dy){
 				case PATROLHIT:
 					if(pbp==0){
 						if(board[i][j+1]==PATROL || board[i][j+1]==PATROLHIT){		// Set image across
-							bufferPtr = readRAWImage( "PatrolBoatA.dat", 0);
+							bufferPtr = readRAWImage( "dat/PatrolBoatA.dat", 0);
 							printRAWImage(x,y,62,30,bufferPtr);
 						}
 
 						else if(board[i+1][j]==PATROL || board[i+1][j]==PATROLHIT){		// Set image down
-							bufferPtr = readRAWImage( "PatrolBoatD.dat", 0);
+							bufferPtr = readRAWImage( "dat/PatrolBoatD.dat", 0);
 							printRAWImage(x,y,31,61,bufferPtr);
 						}
 						pbp=1;
