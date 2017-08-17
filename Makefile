@@ -1,19 +1,19 @@
-BUILD_DIR=		build/
-INSTALL_DIR=	/usr/local/bin
+BUILD_DIR=    build/
+INSTALL_DIR=  /usr/local/bin
 
 BIN_DIR=    bin/
-DAT_DIR=	dat/
-ETC_DIR=	etc/
+DAT_DIR=    dat/
+ETC_DIR=    etc/
 INC_DIR=    inc/
 LIB_DIR=    lib/
 OBJ_DIR=    obj/
-DOC_DIR=	share/doc/
-MAN_DIR=	share/man/
+DOC_DIR=    share/doc/
+MAN_DIR=    share/man/
 SRC_DIR=    src/
 TST_DIR=    tst/
 
-CC=			gcc
-CFLAGS=		-I$(INC_DIR)
+CC=         gcc
+CFLAGS=     -I$(INC_DIR)
 CCX=        g++
 CCXFLAGS=   -I$(INC_DIR)
 SH=         bash
