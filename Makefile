@@ -13,7 +13,7 @@ SRC_DIR=    src/
 TST_DIR=    tst/
 
 CC=         gcc
-CFLAGS=     -I$(INC_DIR)
+CFLAGS=     -I$(INC_DIR) -lX11
 CCX=        g++
 CCXFLAGS=   -I$(INC_DIR)
 SH=         bash
