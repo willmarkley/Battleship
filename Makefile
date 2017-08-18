@@ -26,7 +26,7 @@ OBJS=	$(SRCS:$(SRC_DIR)%.c=$(BUILD_DIR)$(OBJ_DIR)%.o)
 TGTS=	$(BUILD_DIR)$(BIN_DIR)battleship
 
 
-all: setup $(TGTS)
+all: $(BUILD_DIR) $(TGTS)
 
 check: all
 	echo $(TST_DIR)
