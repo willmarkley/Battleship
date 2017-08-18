@@ -46,7 +46,7 @@ clean:
 # Build target
 
 $(TGTS): $(OBJS) $(LIBS)
-	$(CC) $(CFLAGS) $< -o $@
+	$(CC) $(CFLAGS) $(OBJS) $(LIBS) -o $@
 
 $(BUILD_DIR)$(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	$(CC) $(CFLAGS) -c $< -o $@
