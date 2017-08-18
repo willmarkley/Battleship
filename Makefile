@@ -52,7 +52,7 @@ $(TGTS): $(OBJS) $(LIBS)
 $(BUILD_DIR)$(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
-setup:
+$(BUILD_DIR):
 	mkdir -p $(BUILD_DIR)$(BIN_DIR)
 	mkdir -p $(BUILD_DIR)$(DAT_DIR)
 	mkdir -p $(BUILD_DIR)$(OBJ_DIR)
