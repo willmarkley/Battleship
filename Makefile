@@ -13,7 +13,8 @@ SRC_DIR=    src/
 TST_DIR=    tst/
 
 CC=         gcc
-CFLAGS=     -I$(INC_DIR) -lX11
+CFLAGS=     -I$(INC_DIR)
+LNKFLAGS=   -lX11
 CCX=        g++
 CCXFLAGS=   -I$(INC_DIR)
 SH=         bash
@@ -46,7 +47,7 @@ clean:
 # Build target
 
 $(TGTS): $(OBJS) $(LIBS)
-	$(CC) $(CFLAGS) $(OBJS) $(LIBS) -o $@
+	$(CC) $(CFLAGS) $(OBJS) $(LIBS) $(LNKFLAGS) -o $@
 
 $(BUILD_DIR)$(OBJ_DIR)%.o: $(SRC_DIR)%.c
 	$(CC) $(CFLAGS) -c $< -o $@
