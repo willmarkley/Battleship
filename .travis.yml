@@ -2,7 +2,7 @@ language: c
 before_install:
 - sudo apt-get -qq update
 - sudo apt-get install -y xorg openbox
-script: make && make check && make install
+script: make && make check
 before_deploy:
 - cd $TRAVIS_BUILD_DIR/build/
 - tar -czf ../battleship.tar.gz bin/
