@@ -3,3 +3,10 @@ before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y xorg openbox
 script: make && make check
+deploy:
+  provider: releases
+  api_key: "GITHUB OAUTH TOKEN"
+  file: "bin/battleship"
+  skip_cleanup: true
+  on:
+    tags: true
