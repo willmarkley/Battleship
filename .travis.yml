@@ -2,11 +2,14 @@ language: c
 before_install:
   - sudo apt-get -qq update
   - sudo apt-get install -y xorg openbox
-script: make && make check
+script: make && make check && make install
+before_deploy:
+  - cd $TRAVIS_BUILD_DIR/build/
+  - tar -czf ../battleship.tar.gz bin/
 deploy:
   provider: releases
   api_key: "GITHUB OAUTH TOKEN"
-  file: "bin/battleship"
+  file: "$TRAVIS_BUILD_DIR/battleship.tar.gz"
   skip_cleanup: true
   on:
     tags: true
