@@ -38,8 +38,7 @@ docs:
 	echo "No Documentation Implemented"
 
 install: $(TGTS)
-	echo $(INSTALL_DIR)
-	echo "No Install Implemented"
+	cp $(TGTS) $(INSTALL_DIR)
 
 clean:
 	rm -rf $(BUILD_DIR)
